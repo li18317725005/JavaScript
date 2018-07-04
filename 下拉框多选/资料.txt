@@ -1,0 +1,162 @@
+http://www.cnblogs.com/landeanfen/p/5013452.html
+isOpen
+
+类型: boolean
+
+是否打开下拉列表。
+
+默认值为 false。
+
+placeholder
+
+类型: string
+
+显示默认的提示信息。
+
+默认值为 ''。
+
+selectAll
+
+类型: boolean
+
+是否显示全选复选框。
+
+默认值为 true。
+
+selectAllText
+
+类型: string
+
+全选复选框的显示内容。
+
+默认值为 Select all。
+
+multiple
+
+类型: boolean
+
+是否在一行中显示多个选项。
+
+默认值为 false。
+
+multipleWidth
+
+类型: integer
+
+一行中每个选项的宽度。
+
+默认值为 80。
+
+single
+
+类型: boolean
+
+是否只允许你选择一行。
+
+默认值为 false。
+
+position
+
+类型: string
+
+定义下拉列表的位置，只能是 bottom 或者 top。
+
+默认值为 bottom.
+
+filter
+
+类型: boolean
+
+是否开启过滤功能。
+
+默认值为 false。
+
+width
+
+类型: integer
+
+定义下拉列表的宽度。
+
+默认值为 undefined。 默认与 select 的宽度相同。
+
+maxHeight
+
+类型: integer
+
+下拉列表的最大高度。
+
+默认值为 250。
+
+（7）常用事件（转载至文档http://wenzhixin.net.cn/p/multiple-select/docs/index.html?locale=zh_CN）
+
+onOpen
+
+当下拉列表被打开时触发。
+
+onClose
+
+当下拉列表被关闭时触发。
+
+onCheckAll
+
+点击全选或者调用 “checkall” 方法时触发。
+
+onUncheckAll
+
+点击全不选或者调用 “uncheckall” 方法时触发。
+
+onOptgroupClick
+
+点击分组时触发。
+
+onClick
+
+点击一个复选框时触发
+
+（8）常用方法（转载至文档http://wenzhixin.net.cn/p/multiple-select/docs/index.html?locale=zh_CN）
+
+getSelects
+
+获取 Multiple Select 选择内容。
+
+参数: type
+
+类型: string
+
+选择内容的类型，value 或者 text。
+
+默认值为 value。
+
+setSelects
+
+设置 Multiple Select 的内容。
+
+参数: values
+
+类型: array
+
+选择框的内容信息。
+
+enable
+
+启用 Multiple Select。
+
+disable
+
+禁用 Multiple Select。在这种模式下，不允许用户操作。
+
+checkAll
+
+全选所有的复选框。
+
+$('select').multipleSelect('checkAll');
+uncheckAll
+
+全不选所有的复选框。
+
+$('select').multipleSelect('uncheckAll');
+refresh
+
+重新加载 Multiple Select。
+
+假如你是通过 AJAX 或者 DOM 来手动添加或者删除 option 选项，可以通过 refresh 方法来重新加载 Multiple Select。

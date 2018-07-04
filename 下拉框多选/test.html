@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>js限制input输入</title>
+</head>
+<body>
+	<input onblur="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\.\-_]/g,'')" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\.\-_]/g,'')"  oncontextmenu="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\.\-_]/g,'')">
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>md5</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" src="./md5.js"></script>
+<script type="text/javascript">
+var str = 123456;
+alert(md5(str));
+</script>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉框多选</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/multiple-select.css">
+</head>
+<body>
+	<select id="sel_search_orderstatus" style="width:500px" multiple="multiple">
+		<option value="1">111</option>
+		<option value="2">222</option>
+		<option value="3">333</option>
+		<option value="4">444</option>
+		<option value="5">555</option>
+	</select>
+	<input type="button" value="测试" id="test">
+</body>
+<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="./js/Index_wenzhixin.js"></script> -->
+<script type="text/javascript" src="./js/multiple-select.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#sel_search_orderstatus').multipleSelect({
+    	placeholder: "请选择",
+    	selectAll: false,
+    	allSelected: '全选',
+    	countSelected: '',
+    });
+    var arr = [1,3,5];
+    $('#sel_search_orderstatus').multipleSelect('setSelects', arr); //默认显示
+    $("#test").click(function(){
+    	alert($("#sel_search_orderstatus").val());
+    })
+})
+</script>
+</html>
