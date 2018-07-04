@@ -1,0 +1,16 @@
+<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="./js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="./js/jquery-ui-timepicker-zh-CN.js"></script>
+<script type="text/javascript">
+$("#time").datetimepicker({
+    changeYear : true,
+    changeMonth : true,
+    showSecond : true,
+    timeFormat : 'hh:mm:ss',
+    dateFormat : 'yy-mm-dd',
+    stepHour : 1,
+    stepMinute : 1,
+    stepSecond : 1
+});
+</script>
