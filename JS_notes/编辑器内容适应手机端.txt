@@ -1,0 +1,5 @@
+var tags = document.body.getElementsByTagName('*');
+	for (var i = 0; i < tags.length; i++) {
+	tags[i].style.width='100%';
+	tags[i].style.height='auto';
+}

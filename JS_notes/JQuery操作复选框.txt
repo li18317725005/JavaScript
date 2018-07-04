@@ -1,0 +1,9 @@
+//获取复选框的值
+var chk_value =[]; 
+$('input[name="goods_uuid[]"]:checked').each(function(){ 
+	chk_value.push($(this).val()); 
+}); 
+alert(chk_value.length==0 ?'你还没有选择任何内容！':chk_value);
+
+//判断一组复选框是否被选中
+$("[name='ids[]']:checked").size() == 0

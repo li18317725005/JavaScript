@@ -1,0 +1,2 @@
+var host = window.location.host;
+var xieyi = window.location.protocol;

@@ -1,0 +1,6 @@
+JSON.stringify  数组->json
+
+JSON.parse      json->数组
+
+
+这里的数组形式是 1,2,3 

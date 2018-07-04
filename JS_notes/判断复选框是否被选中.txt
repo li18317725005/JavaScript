@@ -1,0 +1,4 @@
+if($(this).find("input[type='checkbox']").is(':checked')){ }
+
+
+$("input[type='checkbox']").is(':checked')

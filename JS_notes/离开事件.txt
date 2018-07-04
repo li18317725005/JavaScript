@@ -1,0 +1,4 @@
+window.onbeforeunload = a;
+function a(){
+	console.log('afasdf');
+}

@@ -1,0 +1,2 @@
+1. 禁止出现滚动条
+document.documentElement.style.overflow='hidden';

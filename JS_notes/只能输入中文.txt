@@ -1,0 +1,6 @@
+var nametext=/^[\u4e00-\u9fa5]+$/;
+
+if (!nametext.test(name)){
+	alert('error')
+}
+

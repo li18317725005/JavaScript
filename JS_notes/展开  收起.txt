@@ -1,0 +1,16 @@
+/*Õ¹¿ª*/
+$("#Js-more").click(function(){
+	var Height=$(this).siblings().find("#js-body div").height();
+	$(this).siblings().find("#js-body").animate({
+		height:Height	
+	})
+	$(this).removeClass("show")
+	$(this).siblings().addClass("show")
+})
+$("#Js-min").click(function(){
+	$(this).siblings().find("#js-body").animate({
+		height:"20px"	
+	})
+	$(this).removeClass("show")
+	$(this).siblings().addClass("show")
+})
