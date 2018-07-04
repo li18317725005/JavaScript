@@ -1,0 +1,102 @@
+.circle {
+	width:35px;
+	height:35px;
+	margin:0 auto 15px;
+	-webkit-animation:circle infinite .75s linear;
+	-moz-animation:circle infinite .75s linear;
+	-o-animation:circle infinite .75s linear;
+	animation:circle infinite .75s linear;
+	border:2px solid #fc789d;
+	border-top-color:transparent;
+	border-radius:100%
+}
+
+@-webkit-keyframes circle {
+	0% {
+	-webkit-transform:rotate(0);
+	-ms-transform:rotate(0);
+	-o-transform:rotate(0);
+	transform:rotate(0)
+}
+100% {
+	-webkit-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	transform:rotate(360deg)
+}
+}@-moz-keyframes circle {
+	0% {
+	-webkit-transform:rotate(0);
+	-ms-transform:rotate(0);
+	-o-transform:rotate(0);
+	transform:rotate(0)
+}
+100% {
+	-webkit-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	transform:rotate(360deg)
+}
+}@-o-keyframes circle {
+	0% {
+	-webkit-transform:rotate(0);
+	-ms-transform:rotate(0);
+	-o-transform:rotate(0);
+	transform:rotate(0)
+}
+100% {
+	-webkit-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	transform:rotate(360deg)
+}
+}@keyframes circle {
+	0% {
+	-webkit-transform:rotate(0);
+	-ms-transform:rotate(0);
+	-o-transform:rotate(0);
+	transform:rotate(0)
+}
+100% {
+	-webkit-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	transform:rotate(360deg)
+}
+}
+#load-modal{
+	background-color: rgba(0,0,0,.6);
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 1.42857143;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+#load-modal:before {
+	content:"\200B";
+	display:inline-block;
+	height:100%;
+	vertical-align:middle
+}
+#load-modal .box{
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:auto;
+	margin-right:auto;
+	vertical-align: middle;
+	display: inline-block;
+	background-color: #fff;
+	width: 110px;
+	height: 120px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 10px;
+	padding-top: 25px;
+}
