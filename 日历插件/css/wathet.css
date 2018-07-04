@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+body{
+	font-size: 14px;
+	color:#333;
+	background-color: #fff;
+	font-family:arial,verdana,Microsoft YaHei,Tahoma,Simsun,sans-serif;
+}
+.row {
+}
+.row:after {
+	clear: both
+}
+.row:after,.row:before {
+	display: table;
+	content: " "
+}
+label{
+	position: relative;
+	cursor: pointer;
+}
+input[type=radio],input[type=checkbox]{
+	cursor: pointer;
+}
+button{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+	color:#333;
+}
+.list{
+	text-align: center;
+}
+.list div{
+	display:inline-block;
+}
+input[type=button], input[type=submit], input[type=file], button {
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+ul,li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
