@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/input-focus.css"/>
+<link rel="stylesheet" href="css/styleclear.css"/>
+<link rel="stylesheet" href="css/wathet.css"/>
+<link rel="stylesheet" type="text/css" href="css/public.css" />
+<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js" ></script>
+<style>
+a{color: #000}
+</style>  
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="description" content="">
+<meta name="keywords" content="">
+    <meta charset="UTF-8">
+    <title>标题</title>
+  </head>
+  <body>
+    
+    <form id='add_url' method="get">
+      <input class="form-control pull-left" style=" width:15%; " onfocus=this.blur() onClick="WdatePicker()" type="text" name="star_time" placeholder="起始时间"/>
+      <input class="form-control pull-left" style=" width:15%; " onfocus=this.blur() onClick="WdatePicker()" type="text" name="end_time" placeholder="结束时间" />
+      <select class="form-control pull-left" style=" width:15%; " name="status">
+        <option value="">--请选择--</option>
+        <option value="1">支付成功</option>
+        <option value="0">未完成</option>
+      </select>
+      <input class="form-control pull-left" style=" width:15%; " type="text" name="nickname" placeholder="用户昵称" />
+      <input class="sousuo btn btn-default pull-left" style="margin-left:0.1%;" type="button" id="search" value="查询"/>
+      <input class="sousuo btn btn-default pull-left" style="margin-left:0.1%;" type="button" id="reset" value="重置"/>
+      <!-- <input class="sousuo btn btn-default pull-left" style="margin-left:0.1%;" type="button" id="print" value="打印"/> -->
+    </form>
+<div class="name-box-j" >
+ <div class="name-j-a">
+  <ul class="name-j "></ul>
+      <tbody class='text-center'>
+        <if condition="$wxpayData.list eq null ">
+        没有数据...
+        <else/>
+            <div align="center" id="treade_show">
+              <table class='table table-striped'>
+                <thead  class='text-center'>
+                  <tr >
+                    <th  class='text-center'></th>
+                    <th  class='text-center'></th>
+                    <th  class='text-center'></th>
+                    <th  class='text-center'></th>
+                    <th  class='text-center'></th>
+                  </tr></thead>
+
+                  <volist name="wxpayData.list" id="vo">
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </volist>
+              </table>
+                <div class="paging row">
+                    {$wxpayData.pageStr}
+                </div>
+            </div>
+          </if>
+      </tbody>
+  </div>
+</div>
+
+  </body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+    //显示查询条件
+    $("[name='star_time']").val('{$Think.get.star_time}');
+    $("[name='end_time']").val('{$Think.get.end_time}');
+    $("[name='status']").val('{$Think.get.status}');
+    $("[name='nickname']").val('{$Think.get.nickname}');
+
+    $(function(){
+        //查询
+        $("#search").click(function(){
+          $("#add_url").attr('action', '__URL__/lister');
+          $("#add_url").submit();
+        });
+      
+        //重置
+        $("#reset").click(function(){
+            $("#add_url").attr('action', '__URL__/lister');
+            $("[name='star_time']").val('');
+            $("[name='end_time']").val('');
+            $("[name='status']").val("");
+             $("[name='nickname']").val('');
+            $("#add_url").submit()
+        });
+    });
+</script>
+</html>

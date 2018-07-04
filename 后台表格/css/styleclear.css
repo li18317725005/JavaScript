@@ -1,0 +1,16 @@
+@import url("wathet.css");
+ul,h1,span,div{ margin:0;padding:0;}
+dl,dd,dt,li{ margin:0 ; padding:0;}
+li{ list-style:none;}
+a{ text-decoration:none;color:inherit;.}
+img{ display:block;}
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none; }
+input{ margin:0; padding:0; border:none; outline:none; color:inherit;}
+.clearfix{ clear:both;}
+input,button{ margin:0; padding:0; list-style-type:none;}
+body {
+-webkit-text-size-adjust: 100%!important; /*禁止IOS调整字体大小*/
+}
+input::-webkit-input-speech-button {
+display: none; /*隐藏Android的语音输入按钮*/
+}

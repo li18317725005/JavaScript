@@ -1,0 +1,83 @@
+boby{font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; /*使用无衬线字体*/}
+
+/*主题颜色*/
+.subjectcolor{}
+
+
+/*字体颜色*/
+.whitefont{ color:#fff;}
+.grayfont{color:#e7e7e7;}
+
+/*块*/
+.chunks1{width:100%;}
+.chunks2{width:50%;}
+
+
+/*圆角*/
+.round1{ border-radius:5px;}
+
+
+/*描边方向*/
+.stroke1{ border:#e7e7e7 1px solid;}
+.stroketop1{ border-top:#e7e7e7 1px solid;}
+.strokeleft1{ border-left:#e7e7e7 1px solid;}
+.strokeright1{ border-right:#e7e7e7 1px solid;}
+.strokebottom1{ border-bottom:#e7e7e7 1px solid;}
+
+
+
+
+/*字间距*/
+.rowh1{ line-height:}
+.rowh2{ line-height:}
+.rowh3{ line-height:}
+.rowh4{ line-height:}
+.rowh5{ line-height:}
+
+/*间距方向*/
+.spacingtop1{ margin-top:}
+.spacingleft1{margin-left:}
+.spacingright1{margin-right:}
+.spacingbottom1{margin-bottom:}
+
+
+/*内填充方向*/
+.filltop1{ padding-top:}
+.fillleft1{padding-left:}
+.fillright1{padding-right:}
+.fillbottom1{padding-bottom:}
+
+
+
+
+/*字体大小*/
+.fonts1{ font-size:24px; }
+.fonts2{ font-size:22px; }
+.fonts3{ font-size:20px; }
+.fonts4{ font-size:18px; }
+.fonts5{ font-size:16px; }
+.fonts6{ font-size:14px; }
+
+
+/*位置*/
+.location1{ position:;}
+
+
+.name-j{ line-height:45px; font-size:18px; color:#337ab7;  text-indent:1em; border-bottom:1px solid #ddd;}
+
+
+
+.name-box-j{ width:100%; padding:25px; }
+.name-j-a{ border:1px solid #ddd; border-radius:4px;}
+
+.xx-box ul{ padding:5px 0 ;min-height:40px; border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+
+.name-j-j{line-height:45px; font-size:18px;   border-bottom:1px solid #ddd;border-radius:4px; border-bottom:1px solid #ddd; border-left:1px solid #ddd;}
+
+.whback{ background-color:#fff;}
+
+
+.ss-box{ padding:0 25px;  }
+
+.ss-box ul{border-bottom:1px solid #ddd; padding: 25px 0;}
+
