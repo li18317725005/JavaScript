@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/wathet.css" />
+<link rel="stylesheet" href="css/upload.css" />
+<title>主页</title>
+</head>
+<body>
+<ul class="img-list row">
+	<li class="file-box">
+		<input type="file" name="file" class="addimg"/>
+		<i class="addimg"><span class="addbtn">+</span></i>
+		<span class="file_close">×</span>
+   </li>
+</ul>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/file.js"></script>
+<script>
+//注：
+//0.单图上传跟多图上传的的class名字不能一致，多图上传需给input添加name名字，给span 添加class名字，以上都为默认值。
+//1. 盒子下为 <i> 标签，使用背景图，防止图片变形;
+//2.background-size: contain; 把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域，取最高或者最宽。
+//3.上传的类型为图片，已经有判断，没有大小判断。BMP，PNG，GIF，JPG，JPEG
+//4. 一般格式：$(".file-box").fileImg();只能进行单图上传
+//5.下面为上传类型不是图片加提醒的方法，可以配合弹窗，提示框，警告相关的JS。
+$(".file-img").fileImg({
+	con:function(){		//没有默认值
+		alert("不是图片");
+	}
+});
+//以下为多图上传，可删除的JS，
+$(".img-list").fileImg({
+	con:function(){		//没有默认值
+		alert("不是图片");
+	},
+	file_num: '5',	//上传的最大限制， 默认为1
+	file_close:'.file_close', // 删除按钮的class 默认为.file_close
+});
+// 单图上传跟多图上传的盒子区别， 单图上传为.file-img，多图为.img-list，参考上面html对比。
+</script>
+</body>
+</html>
