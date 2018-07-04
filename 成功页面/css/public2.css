@@ -1,0 +1,339 @@
+input[type=button], input[type=submit], input[type=file], button {
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+ul,ol,li{
+	list-style:none;
+}
+a{
+	color:#333;
+}
+a:hover,a:focus{
+	text-decoration: none;
+	color:#333;
+}
+/*loading*/
+.spinner {
+	margin: 10px auto 0;
+	width: 150px;
+	text-align: center;
+	display: none;
+}
+.spinner > div {
+	width: 15px;
+	height: 15px;
+	background-color: #fb399f;
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+	animation: bouncedelay 1.4s infinite ease-in-out;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+ @-webkit-keyframes bouncedelay {
+ 0%, 80%, 100% {
+-webkit-transform: scale(0.0)
+}
+ 40% {
+-webkit-transform: scale(1.0)
+}
+}
+ @keyframes bouncedelay {
+ 0%, 80%, 100% {
+ transform: scale(0.0);
+ -webkit-transform: scale(0.0);
+}
+40% {
+ transform: scale(1.0);
+ -webkit-transform: scale(1.0);
+}
+}
+/*提示*/
+.Prompt{
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0 10px;
+	background:#f8f8f8;
+	height: 30px;
+	line-height: 30px;
+	background-color: #000000;
+	color:#fff;
+	border-radius:4px;
+}
+.am-Prompt {
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:1110;
+	display:none;
+	outline:0;
+	text-align:center;
+	-webkit-transform:scale(1.185);
+	-ms-transform:scale(1.185);
+	transform:scale(1.185);
+	-webkit-transition-property:opacity,-webkit-transform;
+	transition-property:opacity,-webkit-transform;
+	transition-property:transform,opacity;
+	transition-property:transform,opacity,-webkit-transform;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+	-webkit-perspective:1000px;
+	perspective:1000px
+}
+.am-Prompt:before {
+	content:"\200B";
+	display:inline-block;
+	height:100%;
+	vertical-align:middle
+}
+.am-Prompt.animation{
+-webkit-animation:bounceIn 1s .2s ease both;
+-moz-animation:bounceIn 1s .2s ease both;}
+@-webkit-keyframes bounceIn{
+0%{opacity:0;
+-webkit-transform:scale(.3)}
+50%{opacity:1;
+-webkit-transform:scale(1.05)}
+70%{-webkit-transform:scale(.9)}
+100%{-webkit-transform:scale(1)}
+}
+@-moz-keyframes bounceIn{
+0%{opacity:0;
+-moz-transform:scale(.3)}
+50%{opacity:1;
+-moz-transform:scale(1.05)}
+70%{-moz-transform:scale(.9)}
+100%{-moz-transform:scale(1)}
+}
+.foot-nav{
+	height: 55px;
+	background-color: #fff;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #efefef;
+}
+.foot-nav .nav-box{
+	width: 33.333333%;
+	float: left;
+	padding: 8px 0;
+}
+.foot-nav .nav-box i{
+	width: 25px;
+	height: 25px;
+	background-size: 25px 25px;
+	display:block;
+	margin: 0 auto;
+}
+.foot-nav .nav-box .one{
+	background-image: url(../images/index.png);
+}
+.foot-nav .nav-box .two{
+	background-image: url(../images/img.png);
+}
+.foot-nav .nav-box .twos{
+	background-image: url(../images/img0.png);
+}
+.foot-nav .nav-box .three{
+	background-image: url(../images/user.png);
+}
+.foot-nav .nav-box .threes{
+	background-image: url(../images/user0.png);
+}
+.foot-nav .nav-box span{
+	text-align: center;
+	display: block;
+	font-size: 12px;
+	color:#999;
+}
+.foot-nav .nav-box .ones{
+	background-image: url(../images/index0.png);
+}
+.foot-nav .nav-box span.other{
+	color:#fc789d
+}
+/*购票*/
+.ticket{
+	width: 100%;
+	height: 240px;
+	background-color: #fff;
+	border-bottom: 1px solid #efefef;
+}
+.ticket .type{
+	width: 80px;
+	float: left;
+	height: 240px;
+	background-color: #f0f0f0;
+	z-index: 1200;
+	position: relative;
+}
+.ticket .type span{
+	width: 80px;
+	line-height: 35px;
+	height: 35px;
+	display: block;
+}
+.ticket .type .other{
+	color:#fc789d
+}
+.ticket .type span:first-child{
+	margin-top: 15px;
+}
+.ticket .Choice{
+	padding-top: 10px;
+	width: 100%;
+	padding-left: 90px;
+	padding-right: 10px;
+	float: left;
+	height: 240px;
+	margin-top: -240px;
+}
+.ticket .show{
+	display: block;
+}
+.Choice-box .head{
+	padding-left: 10px;
+	line-height: 35px;
+	text-align: left;
+	color:#fc789d;
+	border-bottom: 1px solid #efefef;
+}
+.Choice-box .buy-box .left{
+	float: left;
+	width: 100%;
+	text-align: left;
+	padding: 10px 90px 10px 10px;
+}
+.Choice-box .buy-box .left .name{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.Choice-box .buy-box .left .money{
+	color:#fc789d;
+}
+.Choice-box .buy-box .left .money .new{
+	font-size: 12px;
+	color:#999;
+}
+.Choice-box .buy-box .right{
+	width: 100px;
+	float: right;
+	margin-top: -57px;
+	height: 57px;
+	text-align: center;
+	line-height: 57px;
+}
+.Choice-box .buy-box .right img{
+	width: 20px;
+	display:inline-block
+}
+.Choice-box .buy-box .right div{
+	margin: 0 5px;
+	display:inline-block;
+	max-width: 38px;
+}
+.Choice-box .buy-box{
+	border-bottom: 1px solid #efefef;
+}
+.Choice-box .Explain{
+	line-height: 25px;
+	width: 100%;
+	padding: 0 10px;
+	text-align: left;
+	color: #999;
+	border-bottom: 1px solid #efefef;
+	font-size: 12px;
+}
+.Choice-box{
+	padding-bottom: 50px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 230px;
+	display: none;
+}
+.Choice-box::-webkit-scrollbar{
+	width: 0;
+}
+.buy-foot{
+	height: 45px;
+	background-color: #fff;
+	width: 100%;
+}
+.buy-foot .left{
+	width: 75%;
+	float: left;
+	line-height: 45px;
+	padding: 0 10px;
+	text-align: left;
+	overflow: hidden;
+}
+.buy-foot .left img{
+	width: 30px;
+	height: 30px;
+	margin-right:5px;
+}
+.buy-foot .left .money .num{
+	margin-right: 5px;
+	color:#fc789d;
+}
+.buy-foot .left .money .how{
+	color:#999;
+	font-size: 12px;
+}
+.buy-foot .right{
+	width: 25%;
+	float: right;
+	background-color:#FC789D;
+	color:#fff;
+	height: 45px;
+	line-height: 45px;
+}
+.del-body {
+	padding: 30px 10px;
+	text-align: center;
+	font-size: 16px;
+	border-bottom: 1px solid #dedede;
+	border-radius: 2px 2px 0 0;
+}
+.am-modal-btn{
+	color:#fc789d
+}
+/*头部*/
+.head-box{
+	width: 100%;
+	height: 45px;
+	background-color: #fc789d;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	color:#fff;
+	line-height: 45px;
+	font-size: 16px;
+	z-index:888;
+}
+.head-box a{
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+}
+.head-box a img{
+	width: 20px;
+}

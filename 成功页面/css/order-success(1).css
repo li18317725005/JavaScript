@@ -1,0 +1,41 @@
+.success-info{
+	width:100%;
+	padding:45px 15px 15px;
+}
+.success-info img{
+	display:block; 
+    width:60px;
+    height:60px;
+    margin:100px auto 15px;
+}
+.success-info div{
+	width:100%;
+	text-align:center;
+	font-size:14px;
+	line-height:30px;
+	color:#666;  
+}
+.success-info div:nth-child(2){
+	color:#fc789d;
+	font-size:18px;
+}
+.success-info div a{
+	display:inline-block;
+	color:#fc789d;
+	margin-left:5px;
+}
+.download{
+	width:100%;
+	padding:15px;
+	margin-top:60px;
+}
+.download button{
+	width:100%;
+	height:35px;
+	line-height:35px;
+	background-color:#fc789d;
+	color:#fff;
+	border-radius:4px;
+	outline:none;
+	border:0;
+}
