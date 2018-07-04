@@ -1,0 +1,8 @@
+<div class="release-list" style="border:0px">
+	<div class="release-group">
+		<div class="file" id="one-img">
+			<input type="file" name="banner">
+			<img src="__PUBLIC__/Vote/images/down.png" id="show_banner">
+		</div>
+	</div>
+</div>

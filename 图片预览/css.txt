@@ -1,0 +1,43 @@
+.release-list {
+	width:100%;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 30px;
+}
+.release-list .release-group {
+	width:400px;
+	margin:10px;
+}
+.release-list .release-group .file {
+	width:100%;
+	height:120px;
+	border:1px solid #eee;
+	position:relative;
+}
+.release-list .release-group .file input {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:2;
+	opacity:0;
+}
+.release-list .release-group .file img {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.release-list .release-group label {
+	display:block;
+	width:80px;
+	height:34px;
+	line-height:34px;
+	float:left;
+}
+.release-list .release-group .form-item {
+	width:80%;
+	float:left;
+}
