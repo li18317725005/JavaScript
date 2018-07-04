@@ -1,0 +1,339 @@
+input[type=button],input[type=submit],input[type=file],button,a,label {
+	cursor:pointer;
+	-webkit-appearance:none;
+	-webkit-tap-highlight-color:transparent;
+}
+.my-modal {
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:1110;
+	outline:0;
+	text-align:center;
+	-webkit-transform:scale(1.185);
+	-ms-transform:scale(1.185);
+	transform:scale(1.185);
+	-webkit-transition-property:opacity,-webkit-transform;
+	transition-property:opacity,-webkit-transform;
+	transition-property:transform,opacity;
+	transition-property:transform,opacity,-webkit-transform;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+	-webkit-perspective:1000px;
+	perspective:1000px
+}
+.my-modal:focus {
+	outline:0
+}
+.my-modal.in {
+	opacity:1;
+	-webkit-transition-duration:.3s;
+	transition-duration:.3s;
+	-webkit-transform:scale(1);
+	-ms-transform:scale(1);
+	transform:scale(1);
+	overflow-x:hidden;
+	overflow-y:auto
+}
+.my-modal.out {
+	opacity:0;
+	z-index:1109;
+	-webkit-transition-duration:.3s;
+	transition-duration:.3s;
+	-webkit-transform:scale(.815);
+	-ms-transform:scale(.815);
+	transform:scale(.815)
+}
+.my-modal:before {
+	content:"\200B";
+	display:inline-block;
+	height:100%;
+	vertical-align:middle
+}
+.my-dimmer-active {
+	overflow:hidden
+}
+.my-dimmer {
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	display:none;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,.6);
+	z-index:1100;
+	opacity:0
+}
+.my-dimmer.my-active {
+	opacity:1
+}
+.modal-new {
+	margin-top:150px;
+	width:100%;
+	padding:0 30px;
+	font-size:12px;
+}
+.modal-new li {
+	color:#5a141c;
+	margin-bottom:5px;
+}
+.modal-new li .two {
+	float:right;
+	display:block;
+	width:200px;
+	text-align:left;
+}
+.modal-new li span.one {
+	width:5px;
+	height:5px;
+	display:block;
+	background-color:#5A141C;
+	border-radius:50%;
+	float:left;
+	margin-top:5px;
+}
+.modal-new li .two.other {
+	color:#cb858d;
+}
+.sign-form {
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:auto;
+	margin-right:auto;
+	width:270px;
+	max-width:100%;
+	border-radius:10px;
+	overflow:hidden;
+}
+.sign-form .logo {
+	width:100px;
+	display:block;
+	margin:10px auto;
+}
+.sign-box {
+	width:100%;
+	background-color:#fff;
+	height:334px;
+	position:relative;
+}
+.ok-box {
+	width:100%;
+	height:250px;
+	background-color:#ffdfec;
+	border-radius:10px;
+	position:relative;
+	padding:30px;
+}
+.ok-box .flow {
+	width:270px;
+	left:0;
+	position:absolute;
+	display:block;
+	top:-100px;
+	z-index:100000;
+}
+.ok-text {
+	color:#e6454a;
+	margin-top:30px;
+	font-size:18px;
+}
+.ok-box .body {
+	position:relative;
+	z-index:1000001;
+}
+.ok-text img {
+	width:18px;
+	margin-right:5px;
+	margin-top:-2px;
+}
+.ok-font {
+	font-size:16px;
+	color:#e6454a;
+	margin:20px 0;
+	height:40px;
+	line-height:20px;
+	width:100%;
+	overflow:hidden;
+	text-align:center;
+}
+.ok-more {
+	width:150px;
+	margin:0 auto;
+	display:block;
+}
+.sign-box .head .ones {
+	width:50%;
+	float:left;
+	line-height:30px;
+	margin-bottom:10px;
+	color:#fff;
+}
+.sign-box .head i {
+	position:absolute;
+	bottom:0px;
+	left:25px;
+	width:80px;
+	height:6px;
+	display:block;
+	background-image:url(../images/modal-top.png);
+	background-size:80px 6px;
+}
+.sign-box .head {
+	border-bottom:1px solid #fff;
+	margin-bottom:10px;
+	font-size:16px;
+	background:-moz-linear-gradient(top,#fd9db7 0%,#e46688 100%);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#fd9db7),color-stop(100%,#e46688));
+	background:-webkit-linear-gradient(top,#fd9db7 0%,#e46688 100%);
+	background:-o-linear-gradient(top,#fd9db7 0%,#e46688 100%);
+	background:-ms-linear-gradient(top,#fd9db7 0%,#e46688 100%);
+	background:linear-gradient(to bottom,#fd9db7 0%,#e46688 100%);
+	position:relative;
+}
+.sign-box .head .skip{
+	width: 35px;
+	height: 35px;
+	border: 1px solid #fff;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border-radius: 50%;
+	font-size: 12px;
+}
+.sign-box .body .ones.active {
+	display:block;
+}
+.sign-box .body .ones {
+	display:none;
+	padding:0 30px;
+}
+.time-box {
+	width:260px;
+	height:90px;
+	position:absolute;
+	top:10px;
+	left:50%;
+	margin-left:-130px;
+	background-color:rgba(0,0,0,.5);
+	z-index:3;
+	color:#fff;
+	border-radius:5px;
+}
+.time-box .name {
+	line-height:40px;
+	text-align:center;
+	font-size:18px;
+}
+#day_show {
+	margin-left:30px;
+}
+#day_show span,#hour_show span,#minute_show span,#second_show span {
+	width:30px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	margin-right:5px;
+	background-color:#fff;
+	border-radius:4px;
+	color:#000;
+	font-size:16px;
+	font-weight:bold;
+	display:inline-block;
+}
+.sign-box .body .ones label {
+	width:100%;
+	display:block;
+	height:40px;
+	border:1px solid #efefef;
+	margin-bottom:10px;
+}
+.sign-box .body .ones label span {
+	width:40px;
+	height:40px;
+	display:block;
+	padding:7px;
+	float:left;
+}
+.sign-box .body .ones label span img {
+	width:25px;
+	height:25px;
+	display:block;
+}
+.sign-box .body .ones label input {
+	width:168px;
+	float:left;
+	border:0;
+	height:38px;
+	outline:0;
+	padding:8px 8px 8px 2px;
+}
+.sign-box .body .ones .title {
+	color:#666;
+	text-align:left;
+	font-size:12px;
+	display:block;
+	margin-top:14px;
+}
+.sign-box .body .ones button {
+	width:210px;
+	height:40px;
+	display:block;
+	background-color:#ef6b5f;
+	border:0;
+	color:#fff;
+	margin-top:12px;
+	outline:0;
+}
+.sign-box .body .ones button:focus {
+	background-color:#ff7568;
+}
+.sign-box .body .ones button.other {
+	margin-top:10px;
+}
+.sign-box .body .ones label.other {
+	width:120px;
+	float:left;
+}
+.sign-box .body .ones label.other input {
+	width:78px;
+}
+.msgs {
+	width:80px;
+	float:right;
+	height:40px;
+	background-color:#ed7797;
+	border-radius:2px;
+	color:#fff;
+	text-align:center;
+	line-height:40px;
+}
+@-webkit-keyframes progress-bar-stripes {
+	from {
+	background-position:40px 0
+}
+to {
+	background-position:0 0
+}
+}@-o-keyframes progress-bar-stripes {
+	from {
+	background-position:40px 0
+}
+to {
+	background-position:0 0
+}
+}@keyframes progress-bar-stripes {
+	from {
+	background-position:40px 0
+}
+to {
+	background-position:0 0
+}
+}

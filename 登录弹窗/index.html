@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/index.css" />
+<title>主页</title>
+</head>
+<body>
+<div class="my-modal" id="sign-modal">
+  <div class="sign-form">
+    <div class="sign-box">
+    	<div class="head row">
+    		<img src="images/logo-back.png" class="logo">
+    		<div class="head-box">
+	    		<div class="ones active">新账号</div>
+	    		<div class="ones">已有账号</div>
+    		</div>
+    		<i class="top"></i>
+    		<p class="skip">跳过</p>
+    	</div>
+    	<div class="body">
+	    	<div class="ones active">
+		    	<label class="row">
+		    		<span><img src="images/form0.png"></span>
+		    		<input placeholder="请输入手机号" name="phone">
+		    	</label>
+		    	<label class="row">
+		    		<span><img src="images/form2.png"></span>
+		    		<input placeholder="请输入用户密码" name="pwd">
+		    	</label>
+		    	<span class="title">(๑`･ᴗ･´๑)已有账号的dalao，请直接登陆哦~
+</span>
+		    	<button type="button" id="sign-one">登录</button>
+	    	</div>
+	    	<div class="ones">
+		    	<label class="row">
+		    		<span><img src="images/form1.png"></span>
+		    		<input placeholder="手机号" name="phonetwo">
+		    	</label>
+		    	<div class="row">
+			    	<label class="row other">
+			    		<span><img src="images/form3.png"></span>
+			    		<input placeholder="验证码" name="code">
+			    	</label>
+			    	<div class="msgs">验证码</div>
+		    	</div>
+		    	<label class="row">
+		    		<span><img src="images/form2.png"></span>
+		    		<input placeholder="密码" name="pwdtwo">
+		    	</label>
+		    	<button type="button" class="other" id="sign-two">注册</button>
+	    	</div>
+    	</div>	
+    </div>
+  </div>
+</div>
+<div class="my-dimmer"></div>
+<script src="js/jquery-2.0.3.min.js" ></script>
+<script>
+/*打开*/	
+$("#sign-modal").show();
+$("#sign-modal").addClass("in")
+$(".my-dimmer").show();
+$(".my-dimmer").addClass('my-active')
+/*关闭*/
+$("#sign-modal .skip").click(function(){
+		$("#sign-modal").addClass("out")
+		$(".my-dimmer").removeClass('my-active')
+		setTimeout(function(){
+			$("#sign-modal").hide();
+			$(".my-dimmer").hide()	
+		},100)
+})
+
+$('body').css({"overflow":"auto","height":"100%"})
+$(".sign-box .head .head-box .ones").each(function(){
+	$(this).click(function(){
+		$(this).addClass("active");
+		$(this).siblings().removeClass("active");
+		$(this).parents(".head").siblings(".body").children(".ones").removeClass("active")
+		$(this).parents(".head").siblings(".body").children(".ones").eq($(this).index()).addClass("active")
+		if($(this).parent(".head-box").siblings(".top").hasClass("other")){
+			$(this).parent(".head-box").siblings(".top").removeClass("other");
+			$(this).parent(".head-box").siblings(".top").stop().animate({
+				left:"26px"
+			})
+		}else{
+			$(this).parent(".head-box").siblings(".top").addClass("other");
+			$(this).parent(".head-box").siblings(".top").stop().animate({
+				left:"162px"
+			})
+		}		
+	})
+})
+$(function() {
+	var validCode=true;
+	$(".msgs").click (function() {
+		var time=30;
+		var code=$(this);
+		if (validCode) {
+			validCode=false;
+			code.addClass("msgs1");
+		var t=setInterval(function  () {
+			time--;
+			code.html(time+"秒");
+			if (time==0) {
+				clearInterval(t);
+			code.html("重新获取");
+				validCode=true;
+			code.removeClass("msgs1");
+			}
+		},1000)
+		}
+	})
+})
+$("#sign-one").click(function(){
+	var phon =$("input[name='phone']").val();
+	var photext=/^(13[0-9]|14[0-9]|15[0-9]|17[0-9]|18[0-9])\d{8}$/;
+	var pwd =$("input[name='pwd']").val();
+	var pwdtext=/^[a-zA-Z0-9]{6,18}$/;
+	if(!photext.test(phon)){
+		$("input[name='phone']").parents("label").css("border-color","#ed7797")
+	}else if(!pwdtext.test(pwd)){
+		$("input[name='pwd']").parents("label").css("border-color","#ed7797")
+	}else{
+		/*OK*/
+	}
+	$("input[name='phone']").blur(function(){
+		$(this).parents("label").css("border-color","#efefef")
+	})
+	$("input[name='pwd']").blur(function(){
+		$(this).parents("label").css("border-color","#efefef")
+	})
+})
+$("#sign-two").click(function(){
+	var phon =$("input[name='phonetwo']").val();
+	var photext=/^(13[0-9]|14[0-9]|15[0-9]|17[0-9]|18[0-9])\d{8}$/;
+	var code =$("input[name='code']").val();
+	var pwdtext=/^[a-zA-Z0-9]{6,18}$/;
+	var pwdtwo =$("input[name='pwdtwo']").val();
+	var nub=/^\d{4,20}$/;
+	if(!photext.test(phon)){
+		$("input[name='phonetwo']").parents("label").css("border-color","#ed7797")
+	}else if(!pwdtext.test(pwdtwo)){
+		$("input[name='pwdtwo']").parents("label").css("border-color","#ed7797")
+	}else if(!nub.test(code)){
+		$("input[name='code']").parents("label").css("border-color","#ed7797")
+	}else{
+		/*OK*/
+	}
+	$("input[name='phonetwo']").blur(function(){
+		$(this).parents("label").css("border-color","#efefef")
+	})
+	$("input[name='pwdtwo']").blur(function(){
+		$(this).parents("label").css("border-color","#efefef")
+	})
+	$("input[name='code']").blur(function(){
+		$(this).parents("label").css("border-color","#efefef")
+	})
+})
+</script>
+</body>
+</html>
