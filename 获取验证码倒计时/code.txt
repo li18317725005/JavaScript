@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>倒计时</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input type="text" name="phone">
+        <span class="msgs">验证码</span>
+        <script src="__PUBLIC__/project/count_down/js/jquery-2.0.3.min.js"></script>
+        <script>
+            $(function () {
+                var validCode = true;
+                $(".msgs").click(function () {
+                    var phone = $("input[name='phone']").val();
+                    var photext = /^(13[0-9]|14[0-9]|15[0-9]|17[0-9]|18[0-9])\d{8}$/;
+                    if (!photext.test(phone)) {
+                        alert("请输入正确手机号");
+                    } else {
+                        var time = 30;
+                        var code = $(this);
+                        if (validCode) {
+                            validCode = false;
+                            code.addClass("msgs1");
+                            // getNoteMessage(phone);
+                            var t = setInterval(function () {
+                                time--;
+                                code.html(time + "秒");
+                                if (time == 0) {
+                                    clearInterval(t);
+                                    code.html("重新获取");
+                                    validCode = true;
+                                    code.removeClass("msgs1");
+                                }
+                            }, 1000)
+                        }
+                    }
+                })
+            })
+
+            function getNoteMessage(phone) {
+                $.ajax({
+                    url: "__APP__/Api/Api/sendMsg",
+                    type: "post",
+                    data: {"phone": phone},
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.code != 200) {
+                            alertInfo(data.info);
+                            return false;
+                        }
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
