@@ -1,0 +1,180 @@
+body{
+	padding-top: 45px;
+	background-color:#f1f1f1;
+}
+.order-top{
+	width:100%;
+	padding:10px 15px;
+	background-color:#fff;
+	margin-bottom:10px; 
+}
+.order-top div:nth-child(1){
+    line-height:14px;
+    margin:0 0 10px -5px; 
+}
+.order-top div:nth-child(2){
+	height:30px;
+	line-height:30px;
+	color:#666; 
+}
+.order-top div:nth-child(2) span{
+    color:#fc789d;
+    font-size:16px; 
+}
+.order-top p{
+	color:#fc789d;
+	margin-bottom:0px;
+	font-size:12px; 
+}
+.person-info{
+	width:100%;
+	padding:15px;
+	background-color:#fff;
+	margin-bottom:10px; 
+}
+.person-info div{
+	height:24px;
+	line-height:24px;
+	color:#666;
+}
+.person-info div span{
+	margin-right:30px;
+}
+.contact-info{
+	width:100%;
+	padding:10px 15px;
+	background-color:#fff;
+	margin-bottom:10px;  
+}
+.contact-info .form-group{
+	width:100%;
+	margin:10px 0;
+}
+.contact-info .form-group input{
+	width:100%;
+	height:34px;
+	line-height:35px;
+	padding:0 10px;
+	border:1px solid #e3e3e3;
+	border-radius:34px;
+	outline:none;    
+}
+.contact-info p{
+	color:#fc789d;
+	font-size:12px;
+}
+.pay-type{
+	width:100%;
+	padding:10px 15px;
+	background-color:#fff; 
+}
+.pay-type span{
+   width:72px;
+   float:left;
+}
+.pay-type div{
+	padding-left:72px;
+}
+.sub-button{
+	width:100%;
+	padding:15px;
+	background-color:#fff; 
+}
+.sub-button button{
+	width:100%;
+	height:34px;
+	line-height:34px;
+	color:#fff;
+	text-align:center;
+	background-color:#fc789d;
+	outline:none;
+	border-radius:4px;
+	border:0;    
+}
+
+#my-prompt .am-modal-dialog{border-radius:6px;background-color:#fff;padding:20px 15px;position:relative;border:1px solid #f7a700;}#my-prompt .am-modal-dialog  .am-modal-hd{border-bottom:1px solid #eee;padding-bottom:15px;}#my-prompt .am-modal-dialog  .am-modal-hd img{width:100px;}#my-prompt .am-modal-dialog  .am-modal-hd div{margin-bottom:10px;font-size:16px;}#my-prompt .am-modal-bd{padding:15px 10px;border-bottom:0px;border-radius:2px 2px 0 0;}#my-prompt .am-modal-bd  p{text-align:center;}#my-prompt .am-modal-bd  p a{display:inline-block;color:#494c9d;margin-left:10px;}#my-prompt .am-modal-bd .am-modal-prompt-input{display:block;float:left;border-radius:0;padding:5px;height:40px;line-height:28px;width:16.6666%;border:1px solid #dedede;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;border-right:none;text-align:center;}#my-prompt .am-modal-bd div .am-modal-prompt-input:last-child{border-right:1px solid #dedede;}#my-prompt .am-modal-dialog .am-close{position:absolute;top:-40px;right:-5px;}#my-prompt .am-modal-dialog .am-close img{width:30px;}
+.pwd-btn{width:180px;height:35px;display:block;border:0;outline:0;background-color:#fc789d;color:#fff;text-align:center;line-height:35px;margin:5px auto 0;border-radius:15px;}
+
+ .alieditContainer{
+        position: relative;
+        width: 212px;
+        margin: 10px auto 0;
+        height: 35px
+    } 
+    
+.sixDigitPassword {
+    position: absolute;
+	left: 0;
+	width: 212px;
+    top: 0;   
+    height: 35px;  
+    color: #fff;
+    display: block;
+    outline: 'none';
+    z-index: 999;
+    opacity:0;
+    filter:alpha(opacity=0);
+  }
+
+  .sixDigitPassword-box {
+      	
+        cursor:text;
+        background: #fff;
+        outline: none;
+        position: relative;
+        padding: 8px 0;
+        height: 34px;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+  }
+  .sixDigitPassword-box b{
+  	visibility: hidden;
+  }
+  .sixDigitPassword-box i {
+  	width: 35px;
+        float: left;
+        display: block;
+        padding: 4px 0;
+        height: 18px;
+        border-left: 1px solid #cccccc;
+    }
+   .sixDigitPassword-box .active {
+        background: url(../images/password-blink.gif) no-repeat center center;        
+    }
+   .sixDigitPassword-box b {
+        display: block;
+        margin: 0 auto;
+        width: 7px;
+        height: 7px;
+        overflow: hidden;
+        visibility:hidden;
+        background: url(../images/passeord-dot.png) no-repeat;
+    }
+  .sixDigitPassword-box span {
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 0px;
+        width: 35px;
+        height: 33px;
+        border: 1px solid rgba(82, 168, 236, .8);
+        border: 1px solid #00ffff\9;
+        border-radius: 2px;
+        visibility: hidden;
+        -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.75), 0 0 8px rgba(82, 168, 236, 0.6);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    }
+    .ui-securitycore  .ui-form-item .ui-form-explain{
+		margin-top: 8px; 
+	}
+  .i-block{
+	display:inline-block;
+  }
+ .six-password{
+    position: relative;
+    height:34px;
+	width: 212px;
+    overflow: hidden;
+    vertical-align: middle;
+    
+}
